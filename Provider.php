@@ -28,7 +28,7 @@ class Provider extends AbstractProvider implements ProviderInterface
     private function getOpenID()
     {
         $openID = new LightOpenID(
-            $this->redirectUrl
+            $this->getConfig('redirect')
         );
 
         $openID->returnUrl = $this->redirectUrl;
